@@ -13,7 +13,7 @@ import com.edj.codefest.models.Account;
 public class TestDemoController {
 	
 	
-	 @GetMapping("accounts/{acctId}")
+	@GetMapping("accounts/{acctId}")
 	public HttpEntity<Account> getAccount(@PathVariable Long acctId) {
 		 
 		 Account acct = new Account();
