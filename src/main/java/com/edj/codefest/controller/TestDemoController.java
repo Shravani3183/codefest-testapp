@@ -15,8 +15,8 @@ import com.edj.codefest.models.Account;
 
 @CrossOrigin(
 		origins= {
-			"http://loalhost:8080",
-			"http://loalhost:3000"
+			"http://localhost:8080",
+			"http://localhost:3000"
 		},
 		allowedHeaders="*",
 		allowCredentials="true")
