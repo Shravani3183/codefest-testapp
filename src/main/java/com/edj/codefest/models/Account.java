@@ -6,14 +6,18 @@ public class Account implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	private String acctId;
+	private String acctNo;
 	private String acctName;
 	private String acctType;
-	public String getAcctId() {
-		return acctId;
+	private String countryCd;
+	
+	
+	
+	public String getAcctNo() {
+		return acctNo;
 	}
-	public void setAcctId(String acctId) {
-		this.acctId = acctId;
+	public void setAcctNo(String acctNo) {
+		this.acctNo = acctNo;
 	}
 	public String getAcctName() {
 		return acctName;
@@ -26,6 +30,12 @@ public class Account implements Serializable{
 	}
 	public void setAcctType(String acctType) {
 		this.acctType = acctType;
+	}
+	public String getCountryCd() {
+		return countryCd;
+	}
+	public void setCountryCd(String countryCd) {
+		this.countryCd = countryCd;
 	}
 	
 	
