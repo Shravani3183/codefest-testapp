@@ -1,3 +1,16 @@
+buildscript {
+	ext {
+		springBootVersion = '3.0.2'
+	}
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("mysql:mysql-connector-java:5.1.34")
+    }
+}
+
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.0.2'
@@ -19,23 +32,31 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'com.microsoft.sqlserver:mssql-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'io.sentry:sentry-spring-boot-starter:6.12.1'
+	implementation 'io.sentry:sentry-spring-boot-starter-jakarta:6.12.1'
 	//runtimeOnly 'com.ibm.db2:jcc'
 	runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-jar{
-	enabled=false
-}
+//jar{
+	//baseName = 'codefestdemo'
+	//version = '0.0.1-SNAPSHOT'
+//}
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+//tasks.bootJar {
+//	archiveFileName.set("app.jar")
+//}
