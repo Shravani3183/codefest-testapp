@@ -32,9 +32,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-jar{
-	baseName = 'demo'
-	version = '0.0.1-SNAPSHOT'
+tasks.bootJar {
+	archiveFileName.set("codefestapp.jar")
 }
 
 tasks.named('test') {
