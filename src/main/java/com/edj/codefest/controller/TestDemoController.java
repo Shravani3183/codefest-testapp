@@ -18,6 +18,7 @@ import com.edj.codefest.models.Account;
 public class TestDemoController {
 	
 	
+<<<<<<< HEAD
 	@Autowired
 	private CustomerService service;
 	
@@ -29,6 +30,10 @@ public class TestDemoController {
 		 
 		 System.out.println(cust.getAddressId());
 		 System.out.println(cust.getCustomerId());
+=======
+	@GetMapping("accounts/{acctId}")
+	public HttpEntity<Account> getAccount(@PathVariable Long acctId) {
+>>>>>>> branch 'main' of https://github.com/Shravani3183/codefest-testapp.git
 		 
 		 Account acct = new Account();
 		 
