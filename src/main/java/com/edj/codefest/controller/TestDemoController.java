@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edj.codefest.database.Customer;
-import com.edj.codefest.database.CustomerService;
 import com.edj.codefest.models.Account;
 
 @CrossOrigin(
@@ -23,10 +21,6 @@ import com.edj.codefest.models.Account;
 
 @RestController
 public class TestDemoController {
-	
-	
-	@Autowired
-	private CustomerService service;
 	
 	
 	 @GetMapping("accounts/{customerId}")
